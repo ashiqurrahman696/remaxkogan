@@ -1,0 +1,209 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    background: url(background_new-scaled.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+    overflow-x: hidden;
+}
+.balloons{
+    margin-top: 2000px;
+    transform: scale(5);
+    animation: animate 5s linear forwards;
+}
+@keyframes animate{
+    0%{
+        margin-top: 2000px;
+    }
+    0%, 33%{
+        transform: scale(5);
+    }
+    35%, 65%{
+        transform: scale(3);
+    }
+    67%, 100%{
+        transform: scale(1);
+    }
+    100%{
+        margin-top: -500px;
+    }
+}
+.balloons img{
+    width: 200px;
+    transform: rotate(-15deg);
+    position: absolute;
+}
+#balloon1{
+    left: calc(50% - 700px);
+    bottom: -200px;
+}
+#balloon2{
+    left: calc(50% - 400px);
+    bottom: -100px;
+}
+#balloon3{
+    left: calc(50% - 100px);
+    bottom: 0;
+}
+#balloon4{
+    left: calc(50% + 200px);
+    bottom: -100px;
+}
+#balloon5 {
+    left: calc(50% + 500px);
+    bottom: -200px;
+}
+.logo img{
+    width: 50%;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    animation: display .5s linear forwards;
+    animation-delay: 2s;
+}
+@keyframes display{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.logo p{
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Jenna Sue Regular';
+}
+.p1{
+    bottom: 300px;
+    color: #fff;
+    font-size: 10em;
+    bottom: -1.5em;
+    animation: moveUp 1s linear forwards;
+    animation-delay: 2.8s;
+}
+@keyframes moveUp{
+    0%{
+        font-size: 30em;
+        bottom: -2em;
+    }
+    100%{
+        font-size: 10em;
+        bottom: 300px;
+    }
+}
+.p2{
+    bottom: 200px;
+    font-size: 7em;
+    opacity: 0;
+    animation: display 1s linear forwards;
+    animation-delay: 1.8s;
+}
+.logo-text{
+    animation: hideText .2s linear forwards;
+    animation-delay: 4.4s;
+}
+@keyframes hideText{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0
+    }
+}
+.p3{
+    bottom: 200px;
+    font-size: 7em;
+    color: #fff;
+    opacity: 0;
+    animation: display 1s linear forwards;
+    animation-delay: 5s;
+}
+img.balloon{
+    position: fixed;
+    left: -100%;
+    top: 300px;
+    z-index: 1000;
+    transform: rotate(-15deg) scale(3);
+    animation: moveRight 1s linear forwards;
+    animation-delay: 4s;
+}
+@keyframes moveRight{
+    0%{
+        left: -100%;
+    }
+    100%{
+        left: 150%;
+    }
+}
+.home-img img{
+    width: 400px;
+    position: fixed;
+    bottom: 150px;
+    left: 100%;
+    z-index: -2;
+    animation: animate2 1s linear forwards,
+                animate3 4s linear infinite;
+    animation-delay: 5s;
+}
+@keyframes animate2{
+    0%{
+        left: 100%;
+    }
+    100%{
+        left: 35%;
+    }
+}
+@keyframes animate3{
+    0%, 100%{
+        transform: rotate(5deg);
+    }
+    50%{
+        transform: rotate(-10deg);
+    }
+}
+.balloons2{
+    opacity: 0;
+    animation: display .2s linear forwards;
+    animation-delay: 4.4s;
+}
+img#balloon6{
+    position: fixed;
+    top: 30px;
+    left: 50px;
+    width: 300px;
+    animation: rotate 3s linear infinite;
+}
+@keyframes rotate{
+    0%, 100%{
+        transform: rotate(-15deg);
+    }
+    50%{
+        transform: rotate(-30deg);
+    }
+}
+img#balloon7{
+    position: fixed;
+    top: 30px;
+    right: 50px;
+    width: 300px;
+    transform: rotate(-30deg);
+    animation: rotate2 3s linear infinite;
+}
+@keyframes rotate2{
+    0%, 100%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(-15deg);
+    }
+}
